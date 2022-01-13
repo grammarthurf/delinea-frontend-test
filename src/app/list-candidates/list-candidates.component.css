@@ -1,0 +1,184 @@
+#container {
+  width: 100vw;
+  height: 100vh;
+
+  background: linear-gradient(to bottom right, var(--primary), var(--secondary), var(--purple));
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 80%;
+  height: 80%;
+
+  overflow-y: auto;
+
+  background: #FFF;
+
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 1rem;
+}
+
+header > * {
+  margin: 0;
+}
+
+header > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+header #logout {
+  border: 1px solid #F52C2C;
+  border-radius: 4px;
+  padding: 4px;
+  background: transparent;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  width: 100%;
+}
+
+table th, table td {
+  text-align: center;
+  width: 33%;
+}
+
+.button-action {
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+
+  margin: 0 0.725rem;
+}
+
+.edit-color {
+  color: var(--primary);
+}
+
+.delete-color {
+  color: #F52C2C;
+}
+
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  z-index: 10;
+}
+
+.modal-content {
+  position: relative;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+
+  display: grid;
+  grid-template-rows: 1fr 0.2fr;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+    height: 30%;
+  }
+}
+
+.modal-content #close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  width: 2rem;
+  height: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.modal-content > div:not(#align-actions-modal) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#align-actions-modal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.size-content-30 {
+  width: 30%;
+  height: 30%;
+}
+
+.size-content-60 {
+  width: 40%;
+  height: 45%;
+}
+/* FIM MODAL */
+
+/* MODAL ADD */
+#container-add-candidate {
+  display: flex;
+  flex-direction: column;
+}
+
+#container-add-candidate form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#container-add-candidate form input {
+  border: 2px solid grey;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+#container-add-candidate form input:focus {
+  border: 2px solid var(--primary);
+}
+
+#container-add-candidate form input:focus::placeholder {
+  color: var(--primary)
+}
+/* FIM MODAL ADD */
+
+/* MODAL EDIT */

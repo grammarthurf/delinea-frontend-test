@@ -1,0 +1,11 @@
+<div id="container">
+  <form [formGroup]="loginForm">
+    <img src="../../assets/logo_horizontal.png" alt="Deline-Logo">
+
+    <div id="align-form">
+      <input type="text" placeholder="Usuário" formControlName="username">
+      <input type="password" placeholder="Senha" formControlName="password">
+      <button type="button" (click)="handleSubmitLoginForm()">Acessar</button>
+    </div>
+  </form>
+</div>
